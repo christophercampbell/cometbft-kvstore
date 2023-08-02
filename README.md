@@ -25,13 +25,10 @@ get peer node ids
 cometbft show-node-id --home <pathN>
 ```
 
-configure genesis with each validator's public info and voting power, and *same chain ID*
+- `<pathN>/config/genesis.toml`: configure genesis with each validator's public info and voting power, and *same chain ID*
+- `<pathN>/config/config.toml`: add all nodes as persistent_peers: `node-id@ip:port` in CSV format
 
-update each laddr for the nodes
-
-Put all nodes in CSV persistent_peers:  `node-id@ip:port`
-
-start the servers (in this case kvstore compiled in cometbft)
+Start the servers 
 
 ```
 kvstore --cmt-home <pathN>
